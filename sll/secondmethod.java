@@ -3,8 +3,8 @@ public class secondmethod {
         public int data;
         public node1 next;
     }
-    public static node1 head;
-    public static node1 tail;
+    public  node1 head;
+    public  node1 tail;
 
     public node1 cr(int value)
     {
