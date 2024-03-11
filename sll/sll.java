@@ -18,6 +18,7 @@ public class sll {
     {
         if (head == null) {
             create(value);
+            return;
         }
         Node newnode = new Node();
         newnode.value=value;
@@ -53,6 +54,10 @@ public class sll {
     public void display()
     {
         Node temp=head;
+        if (head==null) {
+            System.out.println("sll empty");
+            return;
+        }
         System.out.println("head "+head.value + " tail :"+tail.value + " size: "+size);
         
         while (temp.next!=null)
@@ -61,6 +66,7 @@ public class sll {
             temp=temp.next;
          }
          System.out.print(" "+temp.value +" -->null ");
+         System.out.println();
     }
     public int searching(int value)
     {
@@ -82,5 +88,43 @@ public class sll {
         }
 
         return -1;
+    }
+    public void delete(int location)
+    {
+        if(head ==null)
+        {
+            return ;
+        }
+        if(size==1)
+        {
+            head=null;
+            tail=null;
+           
+        }
+        else if(location==0)
+        {
+            head=head.next;
+        }
+        else if(location>=size)
+        {
+            Node temp = head;
+            while (temp.next.next!=null) {
+                temp=temp.next;
+            }
+            tail=temp;
+            tail.next=null;
+        }
+        else{
+            Node temp = head;
+            int count=0;
+            while (count>size) {
+                temp=temp.next;
+                
+            }
+            Node last = temp.next.next;
+            temp.next=last;
+        }
+        size--;
+        
     }
 }

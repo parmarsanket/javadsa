@@ -8,11 +8,23 @@ public class mainfile {
         s1.addnode(15, 2);
         s1.addnode(20, 6);
         s1.addnode(0, 4);
+
+
         
         
         s1.display();
-        System.err.println();
-        System.out.println(s1.searching(15));
+        s1.delete(0);
+        s1.display();
+        s1.delete(7);
+        s1.display();
+        s1.delete(1);
+        s1.display();
+        s1.delete(1);
+        s1.delete(1);
+        s1.delete(1);
+        s1.delete(1);
+        s1.display();
+
 
 
     }
